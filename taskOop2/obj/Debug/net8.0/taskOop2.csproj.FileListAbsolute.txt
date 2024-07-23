@@ -1,0 +1,14 @@
+E:\learnC#\tasks\taskOop2\taskOop2\bin\Debug\net8.0\taskOop2.exe
+E:\learnC#\tasks\taskOop2\taskOop2\bin\Debug\net8.0\taskOop2.deps.json
+E:\learnC#\tasks\taskOop2\taskOop2\bin\Debug\net8.0\taskOop2.runtimeconfig.json
+E:\learnC#\tasks\taskOop2\taskOop2\bin\Debug\net8.0\taskOop2.dll
+E:\learnC#\tasks\taskOop2\taskOop2\bin\Debug\net8.0\taskOop2.pdb
+E:\learnC#\tasks\taskOop2\taskOop2\obj\Debug\net8.0\taskOop2.GeneratedMSBuildEditorConfig.editorconfig
+E:\learnC#\tasks\taskOop2\taskOop2\obj\Debug\net8.0\taskOop2.AssemblyInfoInputs.cache
+E:\learnC#\tasks\taskOop2\taskOop2\obj\Debug\net8.0\taskOop2.AssemblyInfo.cs
+E:\learnC#\tasks\taskOop2\taskOop2\obj\Debug\net8.0\taskOop2.csproj.CoreCompileInputs.cache
+E:\learnC#\tasks\taskOop2\taskOop2\obj\Debug\net8.0\taskOop2.dll
+E:\learnC#\tasks\taskOop2\taskOop2\obj\Debug\net8.0\refint\taskOop2.dll
+E:\learnC#\tasks\taskOop2\taskOop2\obj\Debug\net8.0\taskOop2.pdb
+E:\learnC#\tasks\taskOop2\taskOop2\obj\Debug\net8.0\taskOop2.genruntimeconfig.cache
+E:\learnC#\tasks\taskOop2\taskOop2\obj\Debug\net8.0\ref\taskOop2.dll
