@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("taskOop2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61f18df8c65a7a1c3444ce3cc2d22a8b4a87f6d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+070c298197fa5c8f90e669b438e23f83faabb0f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("taskOop2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("taskOop2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

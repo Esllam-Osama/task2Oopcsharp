@@ -32,12 +32,12 @@ class Student
     this.Id = student.Id;
     this.Name = student.Name;
   }
-  public void EnrollCourse(string course , School school)
+  public void EnrollCourse(string course, School school)
   {
     bool chek = true;
-    foreach(Course c in school.Courses)
+    foreach (Course c in school.Courses)
     {
-      if (c.Name==course)
+      if (c.Name == course)
       {
         Courses.Add(c);
         chek = false;
@@ -48,11 +48,16 @@ class Student
     {
       Console.WriteLine("the course is undefind");
     }
-    
+
   }
   public void DisplayDetails()
   {
-    Console.WriteLine($"student name is: {this.Name}\nstudent id is: {this.Id}\ncourses is: [{String.Join(",", this.Courses)}]");
+    List<string> nameCourses = new List<string>();
+    foreach (Course c in this.Courses)
+    {
+      nameCourses.Add(c.Name);
+    }
+    Console.WriteLine($"student name is: {this.Name}\nstudent id is: {this.Id}\ncourses is: [{String.Join(" , ", nameCourses)}]");
     Console.WriteLine("===========================");
   }
 }
@@ -68,15 +73,15 @@ class School
   {
     Courses.Add(course);
   }
-  public void EnrollStudentInCourse(int studentId, string courseName,School school)
+  public void EnrollStudentInCourse(int studentId, string courseName, School school)
   {
     Student student = Students.Find(e => e.Id == studentId);
     //للتأكد ان الطالب موجود و ان الكورس ليس مضافا من قبل اضافه من عندى
     bool chek = false;
-    foreach(Course c in this.Courses) { chek= true; }
+    foreach (Course c in this.Courses) { chek = true; }
     if (student != null && chek)
     {
-      student.EnrollCourse(courseName ,school );
+      student.EnrollCourse(courseName, school);
       Console.WriteLine("the course added");
       Console.WriteLine("===========================");
 
@@ -134,7 +139,7 @@ internal class Program
     school.AddCourse(course2);
 
     // Enrolling students in courses
-    school.EnrollStudentInCourse(1, "Math",school);
+    school.EnrollStudentInCourse(1, "Math", school);
     school.EnrollStudentInCourse(1, "Science", school);
     school.EnrollStudentInCourse(2, "Science", school);
 
