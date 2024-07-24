@@ -1,4 +1,7 @@
-﻿namespace taskOop2;
+﻿using System.Linq;
+using System.Threading.Channels;
+
+namespace taskOop2;
 class Course
 {
   public string Name { get; set; }
@@ -18,7 +21,7 @@ class Student
 {
   public int Id { get; set; }
   public string Name { get; set; }
-  public List<string> Courses { get; set; } = new List<string>();
+  public List<Course> Courses { get; set; } = new List<Course>();
   public Student(string name, int id)
   {
     Id = id;
@@ -29,19 +32,23 @@ class Student
     this.Id = student.Id;
     this.Name = student.Name;
   }
-  public void EnrollCourse(string course)
+  public void EnrollCourse(string course , School school)
   {
-    if (!Courses.Contains(course))
+    bool chek = true;
+    foreach(Course c in school.Courses)
     {
-      Courses.Add(course);
+      if (c.Name==course)
+      {
+        Courses.Add(c);
+        chek = false;
+        return;
+      }
     }
-    else
+    if (chek)
     {
-
-      Console.WriteLine("the courses contain this course");
-      Console.WriteLine("===========================");
-
+      Console.WriteLine("the course is undefind");
     }
+    
   }
   public void DisplayDetails()
   {
@@ -61,13 +68,15 @@ class School
   {
     Courses.Add(course);
   }
-  public void EnrollStudentInCourse(int studentId, string courseName)
+  public void EnrollStudentInCourse(int studentId, string courseName,School school)
   {
     Student student = Students.Find(e => e.Id == studentId);
     //للتأكد ان الطالب موجود و ان الكورس ليس مضافا من قبل اضافه من عندى
-    if (student != null && !student.Courses.Contains(courseName))
+    bool chek = false;
+    foreach(Course c in this.Courses) { chek= true; }
+    if (student != null && chek)
     {
-      student.EnrollCourse(courseName);
+      student.EnrollCourse(courseName ,school );
       Console.WriteLine("the course added");
       Console.WriteLine("===========================");
 
@@ -125,9 +134,9 @@ internal class Program
     school.AddCourse(course2);
 
     // Enrolling students in courses
-    school.EnrollStudentInCourse(1, "Math");
-    school.EnrollStudentInCourse(1, "Science");
-    school.EnrollStudentInCourse(2, "Science");
+    school.EnrollStudentInCourse(1, "Math",school);
+    school.EnrollStudentInCourse(1, "Science", school);
+    school.EnrollStudentInCourse(2, "Science", school);
 
     // Displaying all students and their details
     school.DisplayAllStudents();
